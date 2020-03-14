@@ -1,0 +1,606 @@
+/*
+Theme Name: Ecommerce Theme
+Theme URI: https://wordpress.org/themes/twentyseventeen/
+Author: the WordPress team
+Author URI: https://GrecyJean.tech
+Description: Twenty Seventeen brings your site to life with immersive featured images and subtle animations. With a focus on business sites, it features multiple sections on the front page as well as widgets, navigation and social menus, a logo, and more. Personalize its asymmetrical grid with a custom color scheme and showcase your multimedia content with post formats. Our default theme for 2017 works great in many languages, for any abilities, and on any device.
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: twentyseventeen
+Tags: one-column, two-columns, right-sidebar, flexible-header, accessibility-ready, custom-colors, custom-header, custom-menu, custom-logo, editor-style, featured-images, footer-widgets, post-formats, rtl-language-support, sticky-post, theme-options, threaded-comments, translation-ready
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+*/
+
+/*
+
+dark-grey: #2a2a2a;
+gold: #d4af37;
+light-gray: #fafafa;
+font-family: 'Amatic SC', cursive;
+font-family: 'Montserrat', sans-serif;
+
+
+*/
+
+
+/*========
+GLOBAL
+===========*/
+
+*,
+*::after,
+*::before
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+     
+}
+
+html {
+    font-size: 62.5%;
+    height: 100%;
+}
+
+body {
+    overflow-x: hidden;
+    font-size: 1.6rem;
+     box-sizing: border-box;
+    height: 100%;
+    
+}
+
+.wrapper {
+    min-height: 100%;
+    position: relative;
+}
+
+
+
+.btn-ghost {
+    border:  .1rem solid #2a2a2a;
+    padding: 1rem;
+    display: block;
+    width: 25rem;
+    text-align: center;
+    font-size: 2.5rem;
+    color: #2a2a2a;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+/*========
+HEADER
+===========*/
+
+header {
+    height: 100vh;
+    position: relative;
+}
+
+.video-box {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.video-box video {
+    min-width: 100%;
+    min-height: 100%;
+    
+}
+
+.header-overlay {
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    background: #000;
+    opacity: 0.5;
+}
+
+/*Top-Header*/
+.top-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem;
+    font-family: 'Montserrat', sans-serif;
+    background: rgba(255,255,255,0.2);
+    z-index: 2;
+}
+
+.search-box {
+    position: relative;
+    z-index: 2;
+    
+}
+
+.search-box__searchbar {
+    padding: .5rem;
+    padding-left: 3rem;
+    background: rgba(0,0,0,0.3);
+    color: #fff;
+    outline: none;
+}
+
+::-webkit-input-placeholder {
+    color: #fff;
+}
+
+.search-box__icon {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 5px;
+    color: #fff;
+    font-size: 1.2rem;
+    
+}
+
+.logo-box {
+    z-index: 2;
+}
+
+.logo-box__logo {
+    color: #d4af37;
+    text-transform: uppercase;
+    position: fixed;
+    left: 50%;
+    transform: translate(-50%, 0);
+    
+}
+
+.cart-box {
+    z-index: 2;
+    color: #fff;
+}
+
+
+.cart-box__item {
+    display: inline-block;
+    text-transform: capitalize;
+    font-size: 1.2rem;
+}
+
+.cart-box__item--other {
+    color: #2a2a2a;
+}
+
+
+.nav{
+    z-index: 2;
+    position: fixed;
+    text-transform: capitalize;
+    padding: .5rem;
+    font-family: 'Montserrat', sans-serif;
+   
+}
+
+.nav-menu__items {
+    padding: .2rem;
+}
+
+ .nav-menu__items a{
+   text-decoration: none;
+     color: #d4af37;
+}
+
+/*========
+Men Feature
+===========*/
+.section-feature-men {
+    font-family: 'Amatic SC', cursive;
+    padding: 6rem;
+    
+}
+
+.section-feature-men .btn-ghost{
+    margin: auto;
+    margin-top: 3rem;
+    
+}
+
+
+.feature-men-items-list {
+    display: flex;
+    justify-content: center;
+    justify-content: space-around;
+    list-style: none;
+    align-items: center;
+}
+
+.fig-img {
+    width: 100%;
+    margin: 0;
+    overflow: hidden;
+    background-color: #000;
+    width: 23.4rem;
+    height: 35.1rem;
+}
+
+.feature-men-items-list img {
+    
+    opacity: 0.7;
+    width: 100%;
+    height: auto;
+    -webkit-transform: scale(1.15);
+    -ms-transform: scale(1.15);
+    transform: scale(1.15);
+    -webkit-transition: -webkit-transform 0.5s, opacity 0.5s;
+    transition: transform 0.5s, opacity 0.5s;
+    width: 23.4rem;
+    height: 35.1rem;
+    
+}
+
+.feature-men-items-list img:hover {
+    opacity: 1;
+    -webkit-transform: scale(1.03);
+    -ms-transform: scale(1.03);
+    transform: scale(1.03);
+}
+
+.feature-men__price-box {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    text-transform: capitalize;
+    font-family: 'Montserrat', sans-serif;
+    width: 20rem;
+    padding: .5rem;
+    color: #2a2a2a;
+}
+
+/*========
+Women-img
+===========*/
+
+.section-women-img {
+    height: 100vh;
+    width: 100vw;
+    background-image: url(assets/img/gracejones.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: 4rem;
+   
+}
+
+/*========
+Women-Feature
+===========*/
+
+.section-feature-women {
+    font-family: 'Amatic SC', cursive;
+    padding: 6rem;
+    
+}
+
+.section-feature-women .btn-ghost{
+    margin: auto;
+    margin-top: 3rem;
+    
+}
+
+/*========
+Women-img
+===========*/
+
+.section-footwear-img{
+    height: 100vh;
+    width: 100vw;
+    background-image: url(assets/img/footwear-background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: 4rem;
+   
+}
+
+/*========
+Footwear-Feature
+===========*/
+
+.section-feature-footwear {
+    font-family: 'Amatic SC', cursive;
+    padding: 10rem;
+    
+}
+
+.section-feature-footwear .btn-ghost{
+    margin: auto;
+    margin-top: 3rem;
+    
+}
+
+/*========
+Footer
+===========*/
+
+footer {
+    font-family: 'Amatic SC', cursive;
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem;
+    font-size: 2rem;
+    height: 5rem;
+    width: 100%;
+}
+
+
+
+.footer-logo {
+    font-weight: 700;
+    font-size: 2.4rem;
+}
+
+
+/*========
+Items Page
+===========*/
+
+.nav-menu__items--page a {
+    color: #2a2a2a;
+}
+
+.container--buy {
+    width: 75%;
+    height: auto;
+    margin-left: 15%;
+    display: flex;
+    justify-content: space-around;
+    flex-flow: wrap;
+    padding: 7rem;
+
+}
+   
+
+.container--buy a {
+    text-decoration: none;
+    color: #2a2a2a;
+}
+
+.items img {
+    height: 30rem;
+}
+
+.items {
+    width: 33%;
+   
+    
+    
+}
+
+.price-box {
+    display: flex;
+    justify-content: space-between;
+    text-transform: capitalize;
+    font-family: 'Amatic SC', cursive;
+    font-weight: 700;
+    width: 20rem;
+    padding: 2rem;
+    font-size: 2.4rem;
+    flex-flow: wrap;
+}
+
+/*========
+Buy Page
+===========*/
+
+.container{
+    padding: 5rem;
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 75vh;
+   
+}
+
+.buy-box{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    padding: 2rem;
+    
+}
+
+.buy-box__price-box {
+    padding: 3rem;
+    text-transform: capitalize;
+    color: #2a2a2a;
+    font-weight: 'Montserrat', sans-serif;
+    text-align: center;
+}
+
+.buy-box__img img{
+    width: 24.1rem;
+  
+    
+}
+
+.item-title {
+    font-weight: 700;
+}
+
+.item-description {
+    padding: 1rem;
+    border-bottom: .2rem solid  #2a2a2a;
+    
+}
+
+.sizes {
+    margin: auto;
+}
+
+.container--buy_page .btn-ghost {
+    margin: auto;
+    font-family: 'Amatic SC', cursive;
+}
+
+.btn-ghost--buy_page {
+    margin: auto;
+}
+
+/*========
+Login Page
+===========*/
+
+
+form{
+    
+    text-align: center;
+    
+    
+}
+
+.iframe-container {
+    width: 70%;
+    height: 70vh;
+    text-align: center;
+}
+
+.container--login{
+    padding: 5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 75vh;
+    
+}
+
+.login {
+    color: #2a2a2a;
+    font-size: 1.5rem;
+    font-family: 'Montserrat', sans-serif;
+       
+}
+
+.login_hr {
+    width: 35vw;
+}
+
+form input {
+    width: 35vw;
+    padding: .7rem;
+    font-family: 'Montserrat', sans-serif;
+}
+
+form ::placeholder {
+    color: #2a2a2a;
+    
+}
+
+.form_small-text {
+    color:  #2a2a2a;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.btn-ghost_form {
+    border:  .1rem solid #2a2a2a;
+    padding: 1rem;
+    display: block;
+    width: 35vw;
+    text-align: center;
+    font-size: 1.5rem;
+    color: #2a2a2a;
+    text-decoration: none;
+    font-weight: 700;
+    margin: auto;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/*========
+Runway
+===========*/
+
+iframe-container {
+   margin: auto;
+}
+
+iframe-container p{
+font-family: 'Montserrat', sans-serif;
+
+   
+}
+
+.collection {
+    color: #2a2a2a;
+    font-weight: 400;
+}
+
+.small-text {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    
+}
+
+/*========
+woocommerce
+===========*/
+
+.product-container {
+    text-align: center;
+    
+    
+}
+
+.products {
+    display: flex;
+    margin-left: 15%;
+    display: flex;
+    justify-content: space-around;
+    flex-flow: wrap;
+    padding: 7rem;
+    list-style: none;
+    text-transform: capitalize;
+    font-family: 'Amatic SC', cursive;
+    font-weight: 700;
+    text-align: center;
+    font-size: 1.8rem;
+    
+
+}
+
+.products a {
+    text-decoration: none;
+    color:#2a2a2a;
+}
+
+.add_to_cart_button {
+    border:  .1rem solid #2a2a2a;
+    padding: 1rem;
+    display: block;
+    width: 25rem;
+    text-align: center;
+    font-size: 2.5rem;
+    color: #2a2a2a;
+    text-decoration: none;
+    font-weight: 700;
+    margin: 3rem;
+}
+
+.woocommerce-price-amount {
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+h1.page-title {
+    font-family: 'Amatic SC', cursive;
+    font-weight: 700;
+    padding: 2rem;
+    
+}
+
